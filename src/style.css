@@ -1,1 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+.my-5 {
+  background-color: #ffffff;
+  border-radius: 5px 5px 5px 5px;
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  background-color: #e8eee0;
+  border-radius: 10px;
+}
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  color: white;
+  background-color: #f82d97;
+}
+
+.mb-3 {
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.row {
+  margin-top: 30px;
+}
