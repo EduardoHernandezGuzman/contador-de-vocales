@@ -1,11 +1,31 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+window.onload = function() {};
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+const result = document.querySelector(".result");
+const btn = document.querySelector("#buttonClick");
+const texto = document.querySelector(".form-control");
+
+btn.addEventListener("click", countVowel);
+
+function countVowel() {
+  if (!texto.value) {
+    return;
+  }
+
+  let vowelCount = 0;
+  let wordVal = texto.value.toLowerCase();
+
+  for (let i = 0; i < wordVal.length; i++) {
+    let letter = wordVal[i];
+
+    if (letter.match(/([a,e,i,o,u])/)) {
+      vowelCount++;
+    }
+  }
+  result.innerHTML = `
+    <strong>${texto.value}</strong> tiene
+    <strong>${vowelCount}</strong> vocales
+  `;
+}
